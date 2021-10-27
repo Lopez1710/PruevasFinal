@@ -1,0 +1,44 @@
+﻿@model WebApplication1.Entidades.Usuarios
+@{
+    ViewData["Title"] = "Home Page";
+    
+    
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.Nick)
+    @Html.TextBoxFor(m => m.Nick)
+    <br />
+    @Html.LabelFor(m => m.Email)
+    @Html.TextBoxFor(m => m.Email, new { type="email"})
+    <br />
+    @Html.LabelFor(m => m.Pass)
+    @Html.TextBoxFor(m => m.Pass)
+    <br />
+    @Html.LabelFor(m => m.RolID)
+    @Html.DropDownListFor(m => m.RolID,new SelectList(ViewBag.ls,"Value","Text"))
+    <br />
+    <input type="submit"/>
+
+}
+
+<div>
+    <
+        @foreach (var listas in ViewBag.imgs)
+        {
+
+            
+                <img src=@listas.imagen width="100" height="100" />
+           
+
+        }
+
+    
+    
+</div>
