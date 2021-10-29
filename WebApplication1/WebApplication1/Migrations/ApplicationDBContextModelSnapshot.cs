@@ -129,11 +129,11 @@ namespace WebApplication1.Migrations
                     b.Property<int>("CategoriaID")
                         .HasColumnType("int");
 
-                    b.Property<int>("Precio")
-                        .HasColumnType("int");
+                    b.Property<float>("Precio")
+                        .HasColumnType("real");
 
-                    b.Property<int>("Producto")
-                        .HasColumnType("int");
+                    b.Property<string>("Producto")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ProductoID");
 

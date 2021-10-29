@@ -9,7 +9,7 @@ using WebApplication1.Data;
 namespace WebApplication1.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20211023013711_Migrations")]
+    [Migration("20211029215435_Migrations")]
     partial class Migrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -131,11 +131,11 @@ namespace WebApplication1.Migrations
                     b.Property<int>("CategoriaID")
                         .HasColumnType("int");
 
-                    b.Property<int>("Precio")
-                        .HasColumnType("int");
+                    b.Property<float>("Precio")
+                        .HasColumnType("real");
 
-                    b.Property<int>("Producto")
-                        .HasColumnType("int");
+                    b.Property<string>("Producto")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ProductoID");
 

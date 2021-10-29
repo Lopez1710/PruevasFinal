@@ -12,8 +12,8 @@ namespace WebApplication1.Entidades
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ProductoID { get; set; }
-        public int Producto { get; set; }
-        public int Precio { get; set; }
+        public string Producto { get; set; }
+        public float Precio { get; set; }
         public int Cantidad { get; set; }
         public int CategoriaID { get; set; }
         public Categorias Categoria { get; set; }

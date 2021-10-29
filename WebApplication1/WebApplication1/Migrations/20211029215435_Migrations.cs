@@ -80,8 +80,8 @@ namespace WebApplication1.Migrations
                 {
                     ProductoID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Producto = table.Column<int>(type: "int", nullable: false),
-                    Precio = table.Column<int>(type: "int", nullable: false),
+                    Producto = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Precio = table.Column<float>(type: "real", nullable: false),
                     Cantidad = table.Column<int>(type: "int", nullable: false),
                     CategoriaID = table.Column<int>(type: "int", nullable: false)
                 },
